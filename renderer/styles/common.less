@@ -1,0 +1,49 @@
+@import "~antd/dist/antd.less";
+@import "./dark.less";
+@import "./overrites.less";
+@import "./comments.less";
+
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before {
+  user-select: none;
+  cursor: default;
+}
+
+
+
+input,
+button,
+textarea,
+:focus {
+  outline: none;
+}
+
+a:not([draggable="true"]),
+img:not([draggable="true"]) {
+  user-drag: none;
+}
+
+a[href^="http://"],
+a[href^="https://"],
+a[href^="ftp://"] {
+  user-drag: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: @body-background;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#titlebar {
+  height: 32px;
+}
+
+#app {
+  flex: 1;
+}

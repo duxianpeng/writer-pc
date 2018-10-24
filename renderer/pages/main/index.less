@@ -1,0 +1,41 @@
+@import "../../styles/common.less";
+.l-app {
+  height: 100vh;
+  overflow: hidden;
+  .l-app__titlebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .titlebar__title {
+      color: @heading-color;
+    }
+  }
+  .l-app__sider {
+    position: relative;
+    .sider__btn {
+      font-size: 20px;
+      line-height: 64px;
+      padding: 0 16px;
+      cursor: pointer;
+      transition: color 0.3s;
+      &:hover {
+        color: #108ee9;
+      }
+    }
+    .sider__footer {
+      position: absolute;
+      bottom: 0px;
+      height: 50px;
+      width: 100%;
+      background: @layout-trigger-background;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .l-app__main {
+    .l-main__content {
+      padding: 20px;
+      display: flex;
+    }
+  }
+}

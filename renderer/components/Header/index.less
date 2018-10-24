@@ -1,0 +1,37 @@
+@import '../../styles/common.less';
+.header {
+    background-color: @layout-header-background;
+    .header__header-top {
+        height: 60px;
+        line-height: 60px;
+        text-align: right;
+        padding: 0 20px;
+        .header-top__account {
+            margin-right: 10px;
+        }
+    }
+    .header__breadcrumb {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-top: 3px solid @primary-color;
+        .breadcrumb__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:after {
+                position: absolute;
+                content: '';
+                border-top: 10px solid @layout-header-background;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                bottom: -10px;
+                left: 50%;
+                margin-left: -7.5px;
+            }
+        }
+        .breadcrumb__date {
+            text-align: right;
+        }
+    }
+}

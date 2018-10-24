@@ -1,0 +1,87 @@
+{
+  "name": "writer-web",
+  "version": "1.0.5",
+  "description": "meridian-gui",
+  "main": "./index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=development webpack -d --watch",
+    "start": "cross-env NODE_ENV=development electron .",
+    "test": "jest",
+    "dist": "build"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/renderer"
+    ]
+  },
+  "build": {
+    "appId": "com.citi.meridian.prime.meridian-gui",
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://127.0.0.1:8080/"
+      }
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.9.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "devtron": "^1.4.0",
+    "electron-builder": "^20.28.4",
+    "electron-redux-devtools": "^0.3.4",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "node-sass": "^4.9.3",
+    "postcss-loader": "^3.0.0",
+    "react-test-renderer": "^16.5.2",
+    "redux-devtools": "^3.4.1",
+    "redux-devtools-dock-monitor": "^1.1.3",
+    "redux-devtools-log-monitor": "^1.4.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "antd": "^3.10.0",
+    "axios": "^0.18.0",
+    "electron": "^1.6.2",
+    "electron-debug": "^1.1.0",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-json-storage": "^4.1.4",
+    "electron-json-storage-sync": "^1.1.1",
+    "electron-react-titlebar": "^0.8.1",
+    "electron-redux": "^1.3.1",
+    "electron-reload": "^1.2.5",
+    "electron-updater": "^3.1.2",
+    "jquery": "^3.3.1",
+    "less": "^2.7.3",
+    "less-loader": "^4.1.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "pify": "^4.0.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6"
+  }
+}

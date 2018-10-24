@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Webpack App</title>
+  </head>
+  <body>
+    <div id='app'></div>
+  <script>
+      const {ipcRenderer} = require("electron"),
+        statusbar = document.getElementById("statusbar");
+  
+        ipcRenderer.on("info", (ev, text) => {
+          statusbar.innerHTML = text;
+        });
+  
+        ipcRenderer.on("update-downloaded", ()=>{
+          const ok = confirm('The application will automaticlly restart to finish installing the update');
+          ok && ipcRenderer.send("restart");
+        })
+  
+    </script>
+  </body>
+</html>
